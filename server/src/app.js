@@ -6,8 +6,10 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
+require('./route')(app)
+
 app.get('/status', function (req,res){
-    res.send('Hello nodejs server belong to nitiphumi')
+    res.send('Hello nodejs server ')
 })
 
 app.get('/hello/:xxx', function(req,res){
